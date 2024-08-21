@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warmth Ceramics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grid-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .grid-item h2 {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1>△ 6-BMIX Glaze Combinations</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="glazes/green-opal.html">
+                <img src="images/green-opal.jpg" alt="Green Opal">
+                <h2>Green Opal</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/pink-opal.html">
+                <img src="images/pink-opal.jpg" alt="Pink Opal">
+                <h2>Pink Opal</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/raspberry-mist.html">
+                <img src="images/raspberry-mist.jpg" alt="Raspberry Mist">
+                <h2>Raspberry Mist</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/tigers-eye.html">
+                <img src="images/tigers-eye.jpg" alt="Tigers Eye">
+                <h2>Tigers Eye</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/dark-flux.html">
+                <img src="images/dark-flux.jpg" alt="Dark Flux">
+                <h2>Dark Flux</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/norse-blue.html">
+                <img src="images/norse-blue.jpg" alt="Norse Blue">
+                <h2>Norse Blue</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/winter-green.html">
+                <img src="images/winter-green.jpg" alt="Winter Green">
+                <h2>Wintergreen</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/light-flux.html">
+                <img src="images/light-flux.jpg" alt="Light Flux">
+                <h2>Light Flux</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/enchanted-forest.html">
+                <img src="images/enchanted-forest.jpg" alt="Enchanted Forest">
+                <h2>Enchanted Forest</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/speckled-plum.html">
+                <img src="images/speckled-plum.jpg" alt="Speckled Plum">
+                <h2>Speckled Plum</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/sandstone.html">
+                <img src="images/sandstone.jpg" alt="Sandstone">
+                <h2>Sandstone</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/frosted-lemon.html">
+                <img src="images/frosted-lemon.jpg" alt="Frosted Lemon">
+                <h2>Frosted Lemon</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/sea-salt.html">
+                <img src="images/sea-salt.jpg" alt="Sea Salt">
+                <h2>Sea Salt</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/dunes.html">
+                <img src="images/dunes.jpg" alt="Dunes">
+                <h2>Dunes</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/rose-quartz.html">
+                <img src="images/rose-quartz.jpg" alt="Rose Quartz">
+                <h2>Rose Quartz</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/toasted-sage.html">
+                <img src="images/toasted-sage.jpg" alt="Toasted Sage">
+                <h2>Toasted Sage</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/blue-midnight.html">
+                <img src="images/blue-midnight.jpg" alt="Blue Midnight">
+                <h2>Blue Midnight</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/textured-turquoise.html">
+                <img src="images/textured-turquoise.jpg" alt="Textured Turquoise">
+                <h2>Textured Turquoise</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/snow.html">
+                <img src="images/snow.jpg" alt="Snow">
+                <h2>Snow</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/blue-rutile.html">
+                <img src="images/blue-rutile.jpg" alt="Blue Rutile">
+                <h2>Blue Rutile</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/temmoku.html">
+                <img src="images/temmoku.jpg" alt="Temmoku">
+                <h2>Temmoku</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/deep-firebrick.html">
+                <img src="images/deep-firebrick.jpg" alt="Deep Firebrick">
+                <h2>Deep Firebrick</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/arctic-blue.html">
+                <img src="images/arctic-blue.jpg" alt="Arctic Blue">
+                <h2>Arctic Blue</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/ironstone.html">
+                <img src="images/ironstone.jpg" alt="Ironstone">
+                <h2>Ironstone</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/indigo-float.html">
+                <img src="images/indigo-float.jpg" alt="Indigo Float">
+                <h2>Indigo Float</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/tourmaline.html">
+                <img src="images/tourmaline.jpg" alt="Tourmaline">
+                <h2>Tourmaline</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/iron-lustre.html">
+                <img src="images/iron-lustre.jpg" alt="Iron Lustre">
+                <h2>Iron Lustre</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/light-sepia.html">
+                <img src="images/light-sepia.jpg" alt="Light Sepia">
+                <h2>Light Sepia</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/obsidian.html">
+                <img src="images/obsidian.jpg" alt="Obsidian">
+                <h2>Obsidian</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/smokey-merlot.html">
+                <img src="images/smokey-merlot.jpg" alt="Smokey Merlot">
+                <h2>Smokey Merlot</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/ice.html">
+                <img src="images/ice.jpg" alt="Ice">
+                <h2>Ice</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/fog.html">
+                <img src="images/fog.jpg" alt="Fog">
+                <h2>Fog</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/weeping-plum.html">
+                <img src="images/weeping-plum.jpg" alt="Weeping Plum">
+                <h2>Weeping Plum</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/chun-plum.html">
+                <img src="images/chun-plum.jpg" alt="Chun Plum">
+                <h2>Chun Plum</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/blue-glacier.html">
+                <img src="images/blue-glacier.jpg" alt="Blue Glacier">
+                <h2>Blue Glacier</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/abalone.html">
+                <img src="images/abalone.jpg" alt="Abalone">
+                <h2>Abalone</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/lime-shower.html">
+                <img src="images/lime-shower.jpg" alt="Lime Shower">
+                <h2>Lime Shower</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/green-tea.html">
+                <img src="images/green-tea.jpg" alt="Green Tea">
+                <h2>Green Tea</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/indigo-rain.html">
+                <img src="images/indigo-rain.jpg" alt="Indigo Rain">
+                <h2>Indigo Rain</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/cordovan.html">
+                <img src="images/cordovan.jpg" alt="Cordovan">
+                <h2>Cordovan</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/fools-gold.html">
+                <img src="images/fools-gold.jpg" alt="Fools Gold">
+                <h2>Fools Gold</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/eggplant.html">
+                <img src="images/eggplant.jpg" alt="Eggplant">
+                <h2>Eggplant</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/celadon-bloom.html">
+                <img src="images/celadon-bloom.jpg" alt="Celadon Bloom">
+                <h2>Celadon Bloom</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/lavender-mist.html">
+                <img src="images/lavender-mist.jpg" alt="Lavender Mist">
+                <h2>Lavender Mist</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/shipwreck.html">
+                <img src="images/shipwreck.jpg" alt="Shipwreck">
+                <h2>Shipwreck</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/northern-woods.html">
+                <img src="images/northern-woods.jpg" alt="Northern Woods">
+                <h2>Northern Woods</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/alabaster.html">
+                <img src="images/alabaster.jpg" alt="Alabaster">
+                <h2>Alabaster</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/muddy-waters.html">
+                <img src="images/muddy-waters.jpg" alt="Muddy Waters">
+                <h2>Muddy Waters</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/peacock.html">
+                <img src="images/peacock.jpg" alt="Peacock">
+                <h2>Peacock</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/gray-opal.html">
+                <img src="images/gray-opal.jpg" alt="Gray Opal">
+                <h2>Gray Opal</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/coral-sands.html">
+                <img src="images/coral-sands.jpg" alt="Coral Sands">
+                <h2>Coral Sands</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/black-walnut.html">
+                <img src="images/black-walnut.jpg" alt="Black Walnut">
+                <h2>Black Walnut</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/lavarock.html">
+                <img src="images/lavarock.jpg" alt="Lavarock">
+                <h2>Lava Rock</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/sand-sea.html">
+                <img src="images/sand-sea.jpg" alt="Sand + Sea">
+                <h2>Sand & Sea</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/purple-mint.html">
+                <img src="images/purple-mint.jpg" alt="Purple Mint">
+                <h2>Purple Mint</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/desert-dusk.html">
+                <img src="images/desert-dusk.jpg" alt="Desert Dusk">
+                <h2>Desert Dusk</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/rusted-iron.html">
+                <img src="images/rusted-iron.jpg" alt="Rusted Iron">
+                <h2>Rusted Iron</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/speckled-toad.html">
+                <img src="images/speckled-toad.jpg" alt="Speckled Toad">
+                <h2>Speckled Toad</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/lustrous-jade.html">
+                <img src="images/lustrous-jade.jpg" alt="Lustrous Jade">
+                <h2>Lustrous Jade</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/satin-patina.html">
+                <img src="images/satin-patina.jpg" alt="Satin Patina">
+                <h2>Satin Patina</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/shino.html">
+                <img src="images/shino.jpg" alt="Shino">
+                <h2>Shino</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/ancient-jasper.html">
+                <img src="images/ancient-jasper.jpg" alt="Ancient Jasper">
+                <h2>Ancient Jasper</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/seaweed.html">
+                <img src="images/seaweed.jpg" alt="Seaweed">
+                <h2>Seaweed</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/olive-float.html">
+                <img src="images/olive-float.jpg" alt="Olive Float">
+                <h2>Olive Float</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/coral.html">
+                <img src="images/coral.jpg" alt="Coral">
+                <h2>Coral</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/white-opal.html">
+                <img src="images/white-opal.jpg" alt="White Opal">
+                <h2>White Opal</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/blue-opal.html">
+                <img src="images/blue-opal.jpg" alt="Blue Opal">
+                <h2>Blue Opal</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/honey-flux.html">
+                <img src="images/honey-flux.jpg" alt="Honey Flux">
+                <h2>Honey Flux</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/micro-pearl.html">
+                <img src="images/micro-pearl.jpg" alt="Micro Pearl">
+                <h2>Micro Pearl</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/amaryllis.html">
+                <img src="images/amaryllis.jpg" alt="Amaryllis">
+                <h2>Amaryllis</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/rainforest.html">
+                <img src="images/rainforest.jpg" alt="Rainforest">
+                <h2>Rainforest</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/cherry-blossom.html">
+                <img src="images/cherry-blossom.jpg" alt="Cherry Blossom">
+                <h2>Cherry Blossom</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/succulent.html">
+                <img src="images/succulent.jpg" alt="Succulent">
+                <h2>Succulent</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/kimchi.html">
+                <img src="images/kimchi.jpg" alt="Kimchi">
+                <h2>Kimchi</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/pink-matte.html">
+                <img src="images/pink-matte.jpg" alt="Pink Matte">
+                <h2>Pink Matte</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/lemon-meringue.html">
+                <img src="images/lemon-meringue.jpg" alt="Lemon Meringue">
+                <h2>Lemon Meringue</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/micro-cerulean.html">
+                <img src="images/micro-cerulean.jpg" alt="Micro Cerulean">
+                <h2>Micro Cerulean</h2>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="glazes/sapphire-float.html">
+                <img src="images/sapphire-float.jpg" alt="Sapphire Float">
+                <h2>Sapphire Float</h2>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
