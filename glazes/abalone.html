@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaze Categorization</title>
+    <title>Abalone</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,95 +15,147 @@
             text-align: center;
             margin-bottom: 40px;
         }
-        .t-chart {
-            display: flex;
-            justify-content: center;
+        .glaze-row {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
         }
-        .t-column {
-            width: 50%;
-            padding: 10px;
-        }
-        .t-column h2 {
+        .glaze-row h2 {
             text-align: center;
             background-color: #d3d3d3;
             padding: 10px;
             margin-top: 0;
         }
-        ul {
+        .glaze-row ul {
             list-style-type: none;
             padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        li {
-            background-color: white;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
             text-align: center;
         }
-        li img {
-            max-width: 100%;
+        .glaze-row img {
+            max-width: 200px;
             height: auto;
-            border-radius: 4px;
-            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <h1>Abalone</h1>
-    <div class="t-chart">
-        <div class="t-column">
-            <h2>Over</h2>
-            <ul>
-                <li>
-                    <img src="abalone_lightflux.jpeg" alt="Abalone over Light-Flux">
-                    Abalone over Light-Flux
-                </li>
-            </ul>
-        </div>
-        <div class="t-column">
-            <h2>Under</h2>
-            <ul>
-                <li>
-                    <img src="whiteopal_abalone.jpeg" alt="White Opal over Abalone">
-                    White Opal over Abalone
-                </li>
-                <li>
-                    <img src="lavendermist_abalone.jpeg" alt="Lavender Mist over Abalone">
-                    Lavender Mist over Abalone
-                </li>
-                <li>
-                    <img src="coral_abalone.jpeg" alt="Coral over Abalone">
-                    Coral over Abalone
-                </li>
-                <li>
-                    <img src="lightflux_abalone.jpeg" alt="Light-Flux over Abalone">
-                    Light-Flux over Abalone
-                </li>
-                <li>
-                    <img src="indigorain_abalone.jpeg" alt="Indigo Rain over Abalone">
-                    Indigo Rain over Abalone
-                </li>
-                <li>
-                    <img src="greentea_abalone.jpeg" alt="Green Tea over Abalone">
-                    Green Tea over Abalone
-                </li>
-                <li>
-                    <img src="frostedlemon_abalone.jpeg" alt="Frosted Lemon over Abalone">
-                    Frosted Lemon over Abalone
-                </li>
-                <li>
-                    <img src="sandstone_abalone.jpeg" alt="Sandstone over Abalone">
-                    Sandstone over Abalone
-                </li>
-                <li>
-                    <img src="raspberrymist_abalone.jpeg" alt="Raspberry Mist over Abalone">
-                    Raspberry Mist over Abalone
-                </li>
-            </ul>
+
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+            <li>
+                <img src="abalone_lightflux.jpeg" alt="Abalone over Light-Flux" onclick="enlargeImage(this)">
+                <p>Abalone over Light-Flux</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+            <li>
+                <img src="whiteopal_abalone.jpeg" alt="White Opal over Abalone" onclick="enlargeImage(this)">
+                <p>White Opal over Abalone</p>
+            </li>
+            <li>
+                <img src="lavendermist_abalone.jpeg" alt="Lavender Mist over Abalone" onclick="enlargeImage(this)">
+                <p>Lavender Mist over Abalone</p>
+            </li>
+            <li>
+                <img src="coral_abalone.jpeg" alt="Coral over Abalone" onclick="enlargeImage(this)">
+                <p>Coral over Abalone</p>
+            </li>
+            <li>
+                <img src="lightflux_abalone.jpeg" alt="Light-Flux over Abalone" onclick="enlargeImage(this)">
+                <p>Light-Flux over Abalone</p>
+            </li>
+            <li>
+                <img src="indigorain_abalone.jpeg" alt="Indigo Rain over Abalone" onclick="enlargeImage(this)">
+                <p>Indigo Rain over Abalone</p>
+            </li>
+            <li>
+                <img src="greentea_abalone.jpeg" alt="Green Tea over Abalone" onclick="enlargeImage(this)">
+                <p>Green Tea over Abalone</p>
+            </li>
+            <li>
+                <img src="frostedlemon_abalone.jpeg" alt="Frosted Lemon over Abalone" onclick="enlargeImage(this)">
+                <p>Frosted Lemon over Abalone</p>
+            </li>
+            <li>
+                <img src="sandstone_abalone.jpeg" alt="Sandstone over Abalone" onclick="enlargeImage(this)">
+                <p>Sandstone over Abalone</p>
+            </li>
+            <li>
+                <img src="raspberrymist_abalone.jpeg" alt="Raspberry Mist over Abalone" onclick="enlargeImage(this)">
+                <p>Raspberry Mist over Abalone</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
         </div>
     </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
