@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abalone</title>
+    <title>Glaze Categorization</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@
             text-align: center;
         }
         .glaze-row img {
-            max-width: 200px;
+            max-width: 200px; 
             height: auto;
             border-radius: 8px;
             cursor: pointer;
@@ -137,8 +137,8 @@
         </ul>
     </div>
 
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
+    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
         <div class="modal-content">
             <img id="modalImg" src="" alt="Enlarged Image">
         </div>
@@ -152,9 +152,13 @@
             modalImg.src = imgElement.src;
         }
 
-        function closeModal() {
+        function closeModal(event) {
             const modal = document.getElementById("myModal");
-            modal.style.display = "none";
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
         }
     </script>
 </body>
