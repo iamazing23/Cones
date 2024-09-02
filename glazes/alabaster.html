@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabaster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .glaze-row {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        .glaze-row h2 {
+            text-align: center;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .glaze-row ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+        }
+        .glaze-row img {
+            max-width: 200px; 
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alabaster</h1>
+
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+            <li>
+                <img src="alabaster_micropearl.jpeg" alt="Alabaster Over Micro Pearl" onclick="enlargeImage(this)">
+                <p>Alabaster Over Micro Pearl</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+            <li>
+                <img src="whiteopal_alabaster.jpeg" alt="White Opal Over Alabaster" onclick="enlargeImage(this)">
+                <p>White Opal over Alabaster</p>
+            </li>
+            <li>
+                <img src="amaryllis_alabaster.jpeg" alt="Amaryllis Over Alabaster" onclick="enlargeImage(this)">
+                <p>Amaryllis Over Alabaster</p>
+            </li>
+            <li>
+                <img src="coral_alabaster.jpeg" alt="Coral Over Alabaster" onclick="enlargeImage(this)">
+                <p>Coral Over Alabaster</p>
+            </li>
+            <li>
+                <img src="lightflux_alabaster.jpeg" alt="Light-Flux Over Alabaster" onclick="enlargeImage(this)">
+                <p>Light-Flux Over Alabaster</p>
+            </li>
+            <li>
+                <img src="eggplant_alabaster.jpeg" alt="Eggplant Over Alabaster" onclick="enlargeImage(this)">
+                <p>Eggplant Over Alabaster</p>
+            </li>
+            <li>
+                <img src="frostedlemon_alabaster.jpeg" alt="Frosted Lemon over Alabaster" onclick="enlargeImage(this)">
+                <p>Frosted Lemon Over Alabaster</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
