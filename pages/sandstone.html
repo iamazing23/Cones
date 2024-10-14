@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Sandstone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .glaze-row {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        .glaze-row h2 {
+            text-align: center;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .glaze-row ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+        }
+        .glaze-row img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+Sandstone    </h1>
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+<li>
+<img src="../glazes/sandstone_abalone.jpeg" alt="sandstone Over abalone" onclick="enlargeImage(this)"><p>Sandstone Over Abalone</p></li>
+<li>
+<img src="../glazes/sandstone_lavarock.jpeg" alt="sandstone Over lavarock" onclick="enlargeImage(this)"><p>Sandstone Over Lavarock</p></li>
+<li>
+<img src="../glazes/sandstone_speckled-plum.jpeg" alt="sandstone Over speckled-plum" onclick="enlargeImage(this)"><p>Sandstone Over Speckled Plum</p></li>
+<li>
+<img src="../glazes/sandstone_lavender-mist.jpeg" alt="sandstone Over lavender-mist" onclick="enlargeImage(this)"><p>Sandstone Over Lavender Mist</p></li>
+<li>
+<img src="../glazes/sandstone_sand-and-sea.jpeg" alt="sandstone Over sand-and-sea" onclick="enlargeImage(this)"><p>Sandstone Over Sand And Sea</p></li>
+<li>
+<img src="../glazes/sandstone_peacock.jpeg" alt="sandstone Over peacock" onclick="enlargeImage(this)"><p>Sandstone Over Peacock</p></li>
+<li>
+<img src="../glazes/sandstone_coral-sands.jpeg" alt="sandstone Over coral-sands" onclick="enlargeImage(this)"><p>Sandstone Over Coral Sands</p></li>
+<li>
+<img src="../glazes/sandstone_northern-woods.jpeg" alt="sandstone Over northern-woods" onclick="enlargeImage(this)"><p>Sandstone Over Northern Woods</p></li>
+<li>
+<img src="../glazes/sandstone_frosted-lemon.jpeg" alt="sandstone Over frosted-lemon" onclick="enlargeImage(this)"><p>Sandstone Over Frosted Lemon</p></li>
+<li>
+<img src="../glazes/sandstone_black-walnut.jpeg" alt="sandstone Over black-walnut" onclick="enlargeImage(this)"><p>Sandstone Over Black Walnut</p></li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+<li>
+<img src="../glazes/frosted-lemon_sandstone.jpeg" alt="frosted-lemon Over sandstone" onclick="enlargeImage(this)"><p>Frosted Lemon Over Sandstone</p></li>
+<li>
+<img src="../glazes/speckled-plum_sandstone.jpeg" alt="speckled-plum Over sandstone" onclick="enlargeImage(this)"><p>Speckled Plum Over Sandstone</p></li>
+        </ul>
+    </div>    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>                

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Dark Flux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .glaze-row {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        .glaze-row h2 {
+            text-align: center;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .glaze-row ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+        }
+        .glaze-row img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+Dark Flux    </h1>
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+<li>
+<img src="../glazes/dark-flux_rose-quartz.jpeg" alt="dark-flux Over rose-quartz" onclick="enlargeImage(this)"><p>Dark Flux Over Rose Quartz</p></li>
+<li>
+<img src="../glazes/dark-flux_amaryllis.jpeg" alt="dark-flux Over amaryllis" onclick="enlargeImage(this)"><p>Dark Flux Over Amaryllis</p></li>
+<li>
+<img src="../glazes/dark-flux_blue-opal.jpeg" alt="dark-flux Over blue-opal" onclick="enlargeImage(this)"><p>Dark Flux Over Blue Opal</p></li>
+<li>
+<img src="../glazes/dark-flux_norse-blue.jpeg" alt="dark-flux Over norse-blue" onclick="enlargeImage(this)"><p>Dark Flux Over Norse Blue</p></li>
+<li>
+<img src="../glazes/dark-flux_tigers-eye.jpeg" alt="dark-flux Over tigers-eye" onclick="enlargeImage(this)"><p>Dark Flux Over Tigers Eye</p></li>
+<li>
+<img src="../glazes/dark-flux_sand-and-sea.jpeg" alt="dark-flux Over sand-and-sea" onclick="enlargeImage(this)"><p>Dark Flux Over Sand And Sea</p></li>
+<li>
+<img src="../glazes/dark-flux_white-opal.jpeg" alt="dark-flux Over white-opal" onclick="enlargeImage(this)"><p>Dark Flux Over White Opal</p></li>
+<li>
+<img src="../glazes/dark-flux_purple-mint.jpeg" alt="dark-flux Over purple-mint" onclick="enlargeImage(this)"><p>Dark Flux Over Purple Mint</p></li>
+<li>
+<img src="../glazes/dark-flux_green-tea.jpeg" alt="dark-flux Over green-tea" onclick="enlargeImage(this)"><p>Dark Flux Over Green Tea</p></li>
+<li>
+<img src="../glazes/dark-flux_green-opal.jpeg" alt="dark-flux Over green-opal" onclick="enlargeImage(this)"><p>Dark Flux Over Green Opal</p></li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+<li>
+<img src="../glazes/pink-opal_dark-flux.jpeg" alt="pink-opal Over dark-flux" onclick="enlargeImage(this)"><p>Pink Opal Over Dark Flux</p></li>
+<li>
+<img src="../glazes/tigers-eye_dark-flux.jpeg" alt="tigers-eye Over dark-flux" onclick="enlargeImage(this)"><p>Tigers Eye Over Dark Flux</p></li>
+        </ul>
+    </div>    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>                

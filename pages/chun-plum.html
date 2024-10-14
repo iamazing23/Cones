@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Chun Plum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .glaze-row {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        .glaze-row h2 {
+            text-align: center;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .glaze-row ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+        }
+        .glaze-row img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+Chun Plum    </h1>
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+<li>
+<img src="../glazes/chun-plum_indigo-float.jpeg" alt="chun-plum Over indigo-float" onclick="enlargeImage(this)"><p>Chun Plum Over Indigo Float</p></li>
+<li>
+<img src="../glazes/chun-plum_textured-turquoise.jpeg" alt="chun-plum Over textured-turquoise" onclick="enlargeImage(this)"><p>Chun Plum Over Textured Turquoise</p></li>
+<li>
+<img src="../glazes/chun-plum_obsidian.jpeg" alt="chun-plum Over obsidian" onclick="enlargeImage(this)"><p>Chun Plum Over Obsidian</p></li>
+<li>
+<img src="../glazes/chun-plum_ironstone.jpeg" alt="chun-plum Over ironstone" onclick="enlargeImage(this)"><p>Chun Plum Over Ironstone</p></li>
+<li>
+<img src="../glazes/chun-plum_smokey-merlot.jpeg" alt="chun-plum Over smokey-merlot" onclick="enlargeImage(this)"><p>Chun Plum Over Smokey Merlot</p></li>
+<li>
+<img src="../glazes/chun-plum_blue-midnight.jpeg" alt="chun-plum Over blue-midnight" onclick="enlargeImage(this)"><p>Chun Plum Over Blue Midnight</p></li>
+<li>
+<img src="../glazes/chun-plum_rainforest.jpeg" alt="chun-plum Over rainforest" onclick="enlargeImage(this)"><p>Chun Plum Over Rainforest</p></li>
+<li>
+<img src="../glazes/chun-plum_arctic-blue.jpeg" alt="chun-plum Over arctic-blue" onclick="enlargeImage(this)"><p>Chun Plum Over Arctic Blue</p></li>
+<li>
+<img src="../glazes/chun-plum_cherry-blossom.jpeg" alt="chun-plum Over cherry-blossom" onclick="enlargeImage(this)"><p>Chun Plum Over Cherry Blossom</p></li>
+<li>
+<img src="../glazes/chun-plum_toasted-sage.jpeg" alt="chun-plum Over toasted-sage" onclick="enlargeImage(this)"><p>Chun Plum Over Toasted Sage</p></li>
+<li>
+<img src="../glazes/chun-plum_succulent.jpeg" alt="chun-plum Over succulent" onclick="enlargeImage(this)"><p>Chun Plum Over Succulent</p></li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+<li>
+<img src="../glazes/indigo-float_chun-plum.jpeg" alt="indigo-float Over chun-plum" onclick="enlargeImage(this)"><p>Indigo Float Over Chun Plum</p></li>
+<li>
+<img src="../glazes/ironstone_chun-plum.jpeg" alt="ironstone Over chun-plum" onclick="enlargeImage(this)"><p>Ironstone Over Chun Plum</p></li>
+        </ul>
+    </div>    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>                

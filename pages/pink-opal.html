@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Pink Opal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .glaze-row {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        .glaze-row h2 {
+            text-align: center;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .glaze-row ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .glaze-row li {
+            margin: 10px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+        }
+        .glaze-row img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .glaze-row img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+Pink Opal    </h1>
+    <div class="glaze-row">
+        <h2>Over</h2>
+        <ul>
+<li>
+<img src="../glazes/pink-opal_gray-opal.jpeg" alt="pink-opal Over gray-opal" onclick="enlargeImage(this)"><p>Pink Opal Over Gray Opal</p></li>
+<li>
+<img src="../glazes/pink-opal_dark-flux.jpeg" alt="pink-opal Over dark-flux" onclick="enlargeImage(this)"><p>Pink Opal Over Dark Flux</p></li>
+<li>
+<img src="../glazes/pink-opal_green-opal.jpeg" alt="pink-opal Over green-opal" onclick="enlargeImage(this)"><p>Pink Opal Over Green Opal</p></li>
+<li>
+<img src="../glazes/pink-opal_light-flux.jpeg" alt="pink-opal Over light-flux" onclick="enlargeImage(this)"><p>Pink Opal Over Light Flux</p></li>
+<li>
+<img src="../glazes/pink-opal_blue-glacier.jpeg" alt="pink-opal Over blue-glacier" onclick="enlargeImage(this)"><p>Pink Opal Over Blue Glacier</p></li>
+<li>
+<img src="../glazes/pink-opal_indigo-rain.jpeg" alt="pink-opal Over indigo-rain" onclick="enlargeImage(this)"><p>Pink Opal Over Indigo Rain</p></li>
+<li>
+<img src="../glazes/pink-opal_shipwreck.jpeg" alt="pink-opal Over shipwreck" onclick="enlargeImage(this)"><p>Pink Opal Over Shipwreck</p></li>
+        </ul>
+    </div>
+
+    <div class="glaze-row">
+        <h2>Under</h2>
+        <ul>
+<li>
+<img src="../glazes/rose-quartz_pink-opal.jpeg" alt="rose-quartz Over pink-opal" onclick="enlargeImage(this)"><p>Rose Quartz Over Pink Opal</p></li>
+<li>
+<img src="../glazes/light-flux_pink-opal.jpeg" alt="light-flux Over pink-opal" onclick="enlargeImage(this)"><p>Light Flux Over Pink Opal</p></li>
+<li>
+<img src="../glazes/muddy-waters_pink-opal.jpeg" alt="muddy-waters Over pink-opal" onclick="enlargeImage(this)"><p>Muddy Waters Over Pink Opal</p></li>
+<li>
+<img src="../glazes/black-walnut_pink-opal.jpeg" alt="black-walnut Over pink-opal" onclick="enlargeImage(this)"><p>Black Walnut Over Pink Opal</p></li>
+<li>
+<img src="../glazes/speckled-plum_pink-opal.jpeg" alt="speckled-plum Over pink-opal" onclick="enlargeImage(this)"><p>Speckled Plum Over Pink Opal</p></li>
+<li>
+<img src="../glazes/coral-sands_pink-opal.jpeg" alt="coral-sands Over pink-opal" onclick="enlargeImage(this)"><p>Coral Sands Over Pink Opal</p></li>
+<li>
+<img src="../glazes/celadon-bloom_pink-opal.jpeg" alt="celadon-bloom Over pink-opal" onclick="enlargeImage(this)"><p>Celadon Bloom Over Pink Opal</p></li>
+<li>
+<img src="../glazes/shipwreck_pink-opal.jpeg" alt="shipwreck Over pink-opal" onclick="enlargeImage(this)"><p>Shipwreck Over Pink Opal</p></li>
+<li>
+<img src="../glazes/indigo-rain_pink-opal.jpeg" alt="indigo-rain Over pink-opal" onclick="enlargeImage(this)"><p>Indigo Rain Over Pink Opal</p></li>
+<li>
+<img src="../glazes/amaryllis_pink-opal.jpeg" alt="amaryllis Over pink-opal" onclick="enlargeImage(this)"><p>Amaryllis Over Pink Opal</p></li>
+<li>
+<img src="../glazes/wintergreen_pink-opal.jpeg" alt="wintergreen Over pink-opal" onclick="enlargeImage(this)"><p>Wintergreen Over Pink Opal</p></li>
+        </ul>
+    </div>    <div id="myModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.querySelector('.modal-content img');
+
+            if (event.target !== modalContent) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>                
